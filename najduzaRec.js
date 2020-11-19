@@ -194,6 +194,7 @@ function checkZandJ(e) {
 }
 
 function removeFeedback() {
+    //cleaning the feedback text, if any
     setTimeout(remove => {
         feedbackEl.textContent = '';
     }, 2000);
@@ -201,8 +202,6 @@ function removeFeedback() {
 
 function feedback(e) {
     //if user entered numbers instead of letters, tryMultiply will result in number, and  wont be NaN
-    //cleaning the feedback text, if any
-
     var tryMultiply = e.target.value * 5;
     var checkNaN = isNaN(tryMultiply);
 
